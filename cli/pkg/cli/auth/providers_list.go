@@ -312,9 +312,9 @@ func GetProviderDisplayName(provider cline.ApiProvider) string {
 	case cline.ApiProvider_ANTHROPIC:
 		return "Anthropic"
 	case cline.ApiProvider_OPENAI:
-		return "OpenAI"
+		return "OpenAI Compatible"
 	case cline.ApiProvider_OPENAI_NATIVE:
-		return "OpenAI Native"
+		return "OpenAI (Official)"
 	case cline.ApiProvider_OPENROUTER:
 		return "OpenRouter"
 	case cline.ApiProvider_XAI:
