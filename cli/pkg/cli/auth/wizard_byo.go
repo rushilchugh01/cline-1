@@ -40,7 +40,7 @@ func (pw *ProviderWizard) showMainMenu() (string, error) {
 			huh.NewSelect[string]().
 				Title("What would you like to do?").
 				Options(
-					huh.NewOption("Configure a new provider", "add"),
+					huh.NewOption("Add or change an API provider", "add"),
 					huh.NewOption("Change model for API provider", "change-model"),
 					huh.NewOption("Remove a provider", "remove"),
 					huh.NewOption("List configured providers", "list"),

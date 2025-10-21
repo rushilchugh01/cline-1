@@ -38,7 +38,7 @@ const (
 //	┃   Change Cline model (only if authenticated)				- hidden if not authenticated
 //	┃   Authenticate with Cline account / Sign out of Cline		- changes based on auth status
 //	┃   Select active provider (Cline or BYO)					- always shown. Used to switch between Cline and BYO providers
-//	┃   Configure API provider									- always shown. Launches provider setup wizard
+//	┃   Configure BYO API providers								- always shown. Launches provider setup wizard
 //	┃   Exit authorization wizard								- always shown. Exits the auth menu
 
 // RunAuthFlow is the entry point for the entire auth flow with instance management
@@ -165,14 +165,14 @@ func ShowAuthMenuWithStatus(isClineAuthenticated bool, hasOrganizations bool, cu
 		options = append(options,
 			huh.NewOption("Sign out of Cline", AuthActionClineLogin),
 			huh.NewOption("Select active provider (Cline or BYO)", AuthActionSelectProvider),
-			huh.NewOption("Configure API provider", AuthActionBYOSetup),
+			huh.NewOption("Configure BYO API providers", AuthActionBYOSetup),
 			huh.NewOption("Exit authorization wizard", AuthActionExit),
 		)
 	} else {
 		options = []huh.Option[AuthAction]{
 			huh.NewOption("Authenticate with Cline account", AuthActionClineLogin),
 			huh.NewOption("Select active provider (Cline or BYO)", AuthActionSelectProvider),
-			huh.NewOption("Configure API provider", AuthActionBYOSetup),
+			huh.NewOption("Configure BYO API providers", AuthActionBYOSetup),
 			huh.NewOption("Exit authorization wizard", AuthActionExit),
 		}
 	}
