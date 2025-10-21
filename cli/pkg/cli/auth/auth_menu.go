@@ -258,11 +258,6 @@ func HandleSelectProvider(ctx context.Context) error {
 		return HandleAuthMenuNoArgs(ctx)
 	}
 
-	if len(providerOptions) == 1 {
-		fmt.Println("Only one provider is configured. Configure another provider to switch between them.")
-		return HandleAuthMenuNoArgs(ctx)
-	}
-
 	providerOptions = append(providerOptions, huh.NewOption("(Cancel)", "cancel"))
 
 	// Show selection menu
